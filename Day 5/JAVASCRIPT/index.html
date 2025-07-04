@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <script src="script.js"></script>
+  <title>Student Details</title>
+</head>
+<body>
+  <form onsubmit="event.preventDefault(); onFormSubmit();">
+    <table border="0" cellpadding="10" align="center" bgcolor="pink">
+<tr>
+<th colspan=5>Personal Details</th>
+</tr>
+
+      <tr>
+        <td bgcolor="skyblue">Name</td>
+        <td><input type="text" id="NAME" placeholder="Enter the Student Name" required /></td>
+      </tr>
+      <tr>
+        <td bgcolor="skyblue">Age</td>
+        <td><input type="number" id="AGE" placeholder="Enter the Age" required /></td>
+      </tr>
+      <tr>
+        <td bgcolor="skyblue">Mobile</td>
+        <td><input type="text" id="MOBILE" placeholder="Enter the Mobile No" required /></td>
+      </tr>
+      <tr>
+        <td bgcolor="skyblue">MailID</td>
+        <td><input type="email" id="MailID" placeholder="Enter a MailID" required /></td>
+      </tr>
+      <tr>
+        <td bgcolor="skyblue">Course</td>
+        <td><input type="text" id="COURSE" placeholder="Enter the Course" required /></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button type="submit">Submit</button>
+          <button type="button" onclick="clearForm()">Clear</button>
+          <button type="button" onclick="exitForm()">Exit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
