@@ -1,0 +1,65 @@
+<html>
+    <head>
+     <script type=text/javascript>
+     function SumDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0)
+            {
+                rem=num%10;
+                ld=rem+ld;
+                num=Math.floor(num/10);
+            }//while
+            Math.floor(num/10)
+            document.getElementById("txtAns").value=ld;
+        }
+            function LargestDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0)
+            {
+                rem=num%10;
+                if(rem>ld)ld=rem;
+                num=Math.floor(num/10);
+            }//while
+            document.getElementById("txtAns").value=ld;
+        }
+        function SmallestDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                sd=9;
+                while(num>0)
+            {
+                rem=num%10;
+                if(rem<sd)ld=rem;
+                num=Math.floor(num/10);
+            }//while
+            document.getElementById("txtAns").value=ld;
+        }
+        function ReverseDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0)
+            {
+                rem=num%10;
+                ld=rem+(10*ld)
+                num=Math.floor(num/10);
+            }//while
+            Math.floor(num/10)
+            document.getElementById("txtAns").value=ld;
+        }
+        
+        </script>
+    </head>
+<body>
+    <p>Enter a Number:<input id="txtNumber"></p>
+    <button onclick="SumDigit()">SumDigits</button>
+    <button onclick="LargestDigit()">LargestDigits</button>
+    <button onclick="SmallestDigit()">SmallestDigits</button>
+    <button onclick="ReverseDigit()">ReverseDigit</button>
+    <p>Sum Of the Digits:<input id="txtAns"></p>
+</body>
+</html>

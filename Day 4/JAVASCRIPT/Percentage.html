@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+            function per()
+            {
+                var num1,num2,Sum;
+                num1=parseInt(document.getElementById("txtFirstNumber").value);
+                num2=parseInt(document.getElementById("txtSecondNumber").value);
+                Sum=num1%num2;
+                document.getElementById("txtAnswer").value=Sum;
+            }
+            function  clean()
+            {
+                document.getElementById("txtFirstNumber").value=0;
+                document.getElementById("txtSecondNumber").value=0;
+                document.getElementById("txtAnswer").value="";
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            First Number:<input id="txtFirstNumber">
+        </p>
+        <p>
+            Second Number:<input id="txtSecondNumber">
+        </p>
+        <button onclick="per()">Percentage</button>
+        <button onclick="clean()">Reset</button>
+        <p>sum=<input id="txtAnswer"></p>
+    </body>
+</html>
