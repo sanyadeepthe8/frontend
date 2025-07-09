@@ -1,0 +1,8 @@
+<html>
+<body bgcolor="lightpink"> 
+<h1 align="center"> Welcome to Loyola College</h1>
+ 
+
+<p>Author:sonu</p>
+</body>
+</html>
