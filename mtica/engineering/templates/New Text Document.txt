@@ -1,0 +1,8 @@
+<html>
+<body bgcolor="lightblue"> 
+<h1 align="center"> Mother Theresa Institution of Engineering</h1>
+<h2 align="center"> Welcome to B.Tech Campus</h2>
+ <h2>Admissions are Opened<h2>
+
+</body>
+</html>
