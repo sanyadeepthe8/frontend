@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body bgcolor="lightpink">
+    <center><h1>MOTHER THERESA COLLEGE</h1>
+<marquee><h3>Welcome to  Canteen</h3>
+<marquee></center>
+    <style>
+        img { max-width: 150px;height:150px; }
+        .menu { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
+    </style>
+</head>
+
+    <h1>Menus List</h1>
+    {% for menu in menus %}
+        <div class="menu">
+            {% if menu.image %}
+                <img src="{{ menu.image.url }}" alt="{{ menu.name }}">
+            {% endif %}
+            <h2><a href="{% url 'menu_detail' menu.pk %}">{{ menu.name }}</a></h2>
+            <p>Rs:{{ menu.price }}/-</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
