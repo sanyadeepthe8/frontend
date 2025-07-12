@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+  {% for x in mymembers %}
+    <li>{{ x.firstname }}</li>
+  {% endfor %}
+</ul>
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% endif %} 
+
+{% if greeting == 1 and day == "Friday" %}
+  <h1>Hello Weekend!</h1>
+{% endif %} 
+
+
+
+</body>
+</html>
