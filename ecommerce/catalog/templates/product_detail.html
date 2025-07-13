@@ -9,7 +9,8 @@
         <img src="{{ product.image.url }}" alt="{{ product.name }}">
     {% endif %}
     <p>{{ product.description }}</p>
-    <p>Price: Rs{{ product.price }}</p>
+    <p>Price: Rs:{{ product.price }}/-</p>
     <a href="/">Back to Products</a>
+    <a href="{% url 'add_to_cart' product.pk %}">Add to Cart</a>
 </body>
 </html>

@@ -9,14 +9,29 @@
 </head>
 <body>
     <h1>Products</h1>
-    {% for product in products %}
-        <div class="product">
-            {% if product.image %}
-                <img src="{{ product.image.url }}" alt="{{ product.name }}">
-            {% endif %}
-            <h2><a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a></h2>
-            <p>${{ product.price }}</p>
-        </div>
+    <form method="get">
+    <input type="text" name="q" placeholder="Search..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+    <h3>Filter by Category:</h3>
+<ul>
+    <li><a href="/">All</a></li>
+    {% for category in categories %}
+        <li><a href="?category={{ category.id }}">{{ category.name }}</a></li>
     {% endfor %}
+</ul>
+{% if request.GET.category %}
+    <input type="hidden" name="category" value="{{ request.GET.category }}">
+{% endif %}
+{% for product in products %}
+    <div class="product">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        {% endif %}
+        <h2><a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a></h2>
+        <p>Rs:{{ product.price }}/-</p>
+    </div>
+    
+{% endfor %}
 </body>
 </html>
